@@ -27,10 +27,8 @@ namespace :git do
         puts "Tagged production as #{last_release_name}"
         
         # remove the old production bronch
-        %x(git push origin :heads/production)
-        %x(git branch -D production)
-        
-        puts "Removed old production branch"
+        %x(git push origin :heads/production)        
+        puts "Removed old production branch from origin"
         
         # recreate the production branch from master
         %x(git checkout master)
