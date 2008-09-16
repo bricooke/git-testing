@@ -1,13 +1,1 @@
-#!/usr/bin/env bash
-
-# create the branch (really a tag at this point)
-git branch -m production $1
-git push origin $1
-
-# remove the old production bronch
-git push origin :heads/production
-
-# recreate the production branch from master
-git checkout master
-git branch production
-git push origin production
+sake task for recreating a production branch from master: http://gist.github.com/11020
