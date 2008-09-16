@@ -1,4 +1,11 @@
-1. rename production to a release name
-2. push
-3. recreate production from master
-4. push
+# create the branch (really a tag at this point)
+git branch -m production $1
+git push origin $1
+
+# remove the old production bronch
+git push origin :heads/production
+
+# recreate the production branch from master
+git checkout master
+git branch production
+git push origin production
