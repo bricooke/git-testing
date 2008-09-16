@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # create the branch (really a tag at this point)
 git branch -m production $1
 git push origin $1
