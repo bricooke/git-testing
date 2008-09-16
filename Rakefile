@@ -34,7 +34,7 @@ namespace :git do
         
         # recreate the production branch from master
         %x(git checkout master)
-        %x(git branch production)
+        %x(git branch -f production)
         %x(git push origin production)
         
         puts "Recreated production branch based off master"
